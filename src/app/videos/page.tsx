@@ -1,32 +1,9 @@
-"use client";
+import Videos from "@/components/pages/Videos/Videos";
 
-import { useQuery } from "convex/react";
-import { api } from "../../../convex/_generated/api";
-import VideoCard from "../../components/pages/VideoSearch/VideoCard/video-card";
-import Link from "next/link";
-
-const Page = () => {
-  const videos = useQuery(api.videos.allVideos);
-
-  if (videos === undefined) {
-    return <div>Loading...</div>;
-  }
-  if (videos === null) {
-    return <div>Videos not found</div>;
-  }
+export default function Home() {
   return (
-    <div>
-      {videos.map((video, index) => (
-        <Link href={`/videos/${video._id}`} key={index}>
-          <VideoCard
-            title={video.title}
-            description={video.description}
-            thumbnail={video.thumbnail}
-          />
-        </Link>
-      ))}
+    <div className=" h-screen w-screen flex flex-col items-center">
+      <Videos />
     </div>
   );
-};
-
-export default Page;
+}

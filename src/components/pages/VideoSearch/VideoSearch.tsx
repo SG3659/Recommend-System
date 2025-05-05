@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
-import VideoCard from "./VideoCard/video-card";
+import VideoCard from "../Common/VideoCard/video-card";
 import { useAction } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 

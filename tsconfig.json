@@ -1,26 +1,83 @@
+// {
+//   "compilerOptions": {
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "noEmit": true,
+//     "esModuleInterop": true,
+//     "module": "esnext",
+//     "moduleResolution": "bundler",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "incremental": true,
+//     "plugins": [
+//       {
+//         "name": "next"
+//       }
+//     ],
+//     "paths": {
+//       "@/*": ["./src/*"]
+//     }
+//   },
+//   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+//   "exclude": ["node_modules"]
+// }
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    // Target modern JS for better performance
+    "target": "ES2017",
+    // Libraries included during compile
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    // Allow JS files (useful during migration or mixed files)
     "allowJs": true,
+    // Skip type-checking of all declaration files (node_modules)
     "skipLibCheck": true,
+    // Enables all strict type-checking options
     "strict": true,
+    // Don't emit output (Next.js handles build)
     "noEmit": true,
+    // Allow default imports from modules with no default export
     "esModuleInterop": true,
+    // Modern module system
     "module": "esnext",
+    // Faster module resolution (used with bundler like Turbopack)
     "moduleResolution": "bundler",
+    // Allow importing `.json` files
     "resolveJsonModule": true,
+    // Required by Next.js for fast refresh and isolated compilation
     "isolatedModules": true,
+    // Keep JSX syntax, let Next.js handle it via SWC
     "jsx": "preserve",
+    // Improve rebuild speed by tracking changes incrementally
     "incremental": true,
+    // Let TypeScript use Next.js specific plugin
     "plugins": [
       {
         "name": "next"
       }
     ],
+    // Optional: Add path alias (import from "@/components/...")
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  // Files included for compilation
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  // Exclude node_modules
+  "exclude": [
+    "node_modules"
+  ]
 }

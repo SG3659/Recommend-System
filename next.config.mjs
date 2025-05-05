@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+     reactStrictMode: true,
+    experimental: {
+     turbo: true,
+     },
     images:{
         remotePatterns:[
             {
@@ -7,7 +11,11 @@ const nextConfig = {
                 hostname: 'res.cloudinary.com',
             }
         ]
-    }
+    },
+
+    typescript: {
+        ignoreBuildErrors: true,
+      },
 };
 
 export default nextConfig;

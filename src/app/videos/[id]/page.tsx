@@ -4,7 +4,7 @@ import { useAction, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import { Id } from "../../../../convex/_generated/dataModel";
 import Image from "next/image";
-import VideoCard from "../../../components/pages/VideoSearch/VideoCard/video-card";
+import VideoCard from "../../../components/pages/Common/VideoCard/video-card";
 import { PlayIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { video } from "@/components/pages/VideoSearch/VideoSearch";
