@@ -1,4 +1,4 @@
-import { AddVideo } from "../../components/pages/AddVideo/add-video";
+import { AddVideo } from "../components/pages/AddVideo/add-video";
 
 export default function Home() {
   return (

@@ -1,8 +1,8 @@
 "use client";
 
 import { useQuery } from "convex/react";
-import { api } from "../../../../convex/_generated/api";
-import VideoCard from "../../../components/pages/VideoSearch/VideoCard/video-card";
+import { api } from "../../../convex/_generated/api";
+import VideoCard from "../../components/pages/VideoSearch/VideoCard/video-card";
 import Link from "next/link";
 
 const Page = () => {

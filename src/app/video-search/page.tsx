@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar } from '../../../components/pages/VideoSearch/navbar'
+import { Navbar } from '../../components/pages/VideoSearch/navbar'
 import { VideoSearch } from '@/components/pages/VideoSearch/VideoSearch'
 
 const VideoSearchPage = () => {
